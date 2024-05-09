@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.2bd11895.css",
-    "main.js": "/static/js/main.ffc34ede.js",
-    "static/media/almatyBackground.png": "/static/media/almatyBackground.bc993cfba060ec4cd395.png",
-    "index.html": "/index.html",
-    "main.2bd11895.css.map": "/static/css/main.2bd11895.css.map",
-    "main.ffc34ede.js.map": "/static/js/main.ffc34ede.js.map"
+    "main.css": "/elamApp/static/css/main.fff51890.css",
+    "main.js": "/elamApp/static/js/main.ffc34ede.js",
+    "static/media/almatyBackground.png": "/elamApp/static/media/almatyBackground.bc993cfba060ec4cd395.png",
+    "index.html": "/elamApp/index.html",
+    "main.fff51890.css.map": "/elamApp/static/css/main.fff51890.css.map",
+    "main.ffc34ede.js.map": "/elamApp/static/js/main.ffc34ede.js.map"
   },
   "entrypoints": [
-    "static/css/main.2bd11895.css",
+    "static/css/main.fff51890.css",
     "static/js/main.ffc34ede.js"
   ]
 }
