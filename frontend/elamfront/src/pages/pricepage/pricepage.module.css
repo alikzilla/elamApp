@@ -1,0 +1,28 @@
+.pricepage {
+  margin-bottom: 30px;
+  min-height: 500px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text {
+  padding: 0 30px;
+}
+
+.houselist {
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-auto-flow: dense;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 60px 15px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
