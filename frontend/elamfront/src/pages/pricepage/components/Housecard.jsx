@@ -1,4 +1,5 @@
 import styles from "./pricecomp.module.css";
+import { Link } from "react-router-dom";
 
 const Housecard = ({ img, name, cost, address, rating }) => {
   return (
@@ -12,7 +13,9 @@ const Housecard = ({ img, name, cost, address, rating }) => {
           <p>Rating: {rating}/5</p>
         </div>
         <div className={styles.controlContent}>
-          <button>Look</button>
+          <Link to={`/houses/${name}`}>
+            <button>Look</button>
+          </Link>
         </div>
       </div>  
     </section>

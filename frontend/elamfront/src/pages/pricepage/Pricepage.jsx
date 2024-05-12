@@ -8,7 +8,9 @@ const Pricepage = ({}) => {
   const [searchInput, setSearchInput] = useState('');
 
   const filterHouses = () => {
-    if (!searchInput.trim()) return houses;
+    if (!searchInput.trim()) {
+      return houses;
+    }
     return houses.filter(house => house.name.toLowerCase().includes(searchInput.toLowerCase()));
   };
 

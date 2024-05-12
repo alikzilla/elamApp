@@ -6,9 +6,9 @@ const Header = ({}) => {
     <header className={styles.header}>
       <Link to={"/"} className={styles.headerTitle}>Elam</Link>
       <ul className={styles.itemList}>
-        <Link to={"/about"} className={styles.itemText}>Who we are</Link>
-        <Link to={"/pricepage"} className={styles.itemText}>Price</Link>
-        <Link to={"/contact"} className={styles.itemText}>Contact</Link>
+        <Link to={"/aboutpage"} className={styles.itemText}>Who we are</Link>
+        <Link to={"/houses"} className={styles.itemText}>Houses</Link>
+        <Link to={"/contactpage"} className={styles.itemText}>Contact</Link>
       </ul>
     </header>
   )
