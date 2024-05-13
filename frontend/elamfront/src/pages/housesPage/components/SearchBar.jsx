@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from "./pricecomp.module.css";
 
-const Searchbar = ({ setSearchInput }) => {
+const SearchBar = ({ setSearchInput }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (event) => {
@@ -24,4 +24,4 @@ const Searchbar = ({ setSearchInput }) => {
   );
 };
 
-export default Searchbar;
+export default SearchBar;

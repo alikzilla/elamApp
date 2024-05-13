@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react';
-import styles from "./housePage.module.css";
+import styles from "./houseItemPage.module.css";
 import { useParams } from 'react-router-dom';
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { houses } from "../../store";
 import HouseCard from "./components/HouseCard";
 
-function HousePage() {
+function HouseItemPage() {
   const { houseId } = useParams();
   const house = houses.find((item) => houseId == item.id);
   const anotherHouses = houses.filter((item) => houseId != item.id);
 
   useEffect(() => {
+    console.log(houses);
+    console.log(house + "ldsll");
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
@@ -24,6 +26,7 @@ function HousePage() {
           <p>Address: {house.address}</p>
           <p>Cost: {house.cost}</p>
           <p>Rating: {house.rating}/5</p>
+          <p>Description: </p>
         </div>
       </div>
       <div className={styles.sidebar}>
@@ -38,4 +41,4 @@ function HousePage() {
   );
 }
 
-export default HousePage;
+export default HouseItemPage;

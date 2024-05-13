@@ -1,6 +1,6 @@
 import styles from "./pricepage.module.css";
 import { useEffect } from "react";
-import Searchbar from "./components/Searchbar";
+import SearchBar from "./components/SearchBar";
 import Housecard from "./components/Housecard";
 import { houses } from "../../store";
 import { useState } from "react";
@@ -21,7 +21,7 @@ const Pricepage = ({}) => {
 
   return (
     <section className={styles.pricepage}>
-      <Searchbar setSearchInput={setSearchInput} />
+      <SearchBar setSearchInput={setSearchInput} />
       <div className={styles.container}>
         <div className={styles.text}>
           <h1>Properties for you</h1>

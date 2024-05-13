@@ -12,6 +12,7 @@
 
 .title {
   font-size: 30px;
+  font-weight: 600;
 }
 
 .controls {
@@ -28,6 +29,7 @@
   font-size: 25px;
   border-radius: 5px;
   outline-color: rgb(114, 173, 255);
+  border: 1px solid black;
 }
 
 .controls button {
@@ -50,7 +52,7 @@
 }
 
 .housecard {
-  width: 300px;
+  width: 350px;
   height: 400px;
   padding: 20px;
   border: 1px solid rgb(114, 173, 255);

@@ -4,7 +4,7 @@ export const houses = [
   {
     id: 1,
     img: imgForYou,
-    name: "RC ForYou",
+    name: "RC 4YOU",
     cost: "30.000.000tg",
     address: "Rozibakiyeva",
     rating: "4.9",
