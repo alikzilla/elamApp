@@ -1,5 +1,10 @@
 .searchbar {
-  background-color: white;
+  background-image: url("../../../assets/almatyBackground.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-shadow: 0px 0px 5px black;
   width: 100%;
   padding: 140px 0 70px 0;
   display: flex;
@@ -29,26 +34,8 @@
   font-size: 25px;
   border-radius: 5px;
   outline-color: rgb(114, 173, 255);
-  border: 1px solid black;
-}
-
-.controls button {
-  height: 50px;
-  width: 80px;
-  font-size: 25px;
-  font-weight: 700;
-  background-color: black;
-  border: 1px solid rgb(114, 173, 255);
-  border-radius: 5px;
-  color: rgb(114, 173, 255);
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.controls button:hover {
-  background-color: rgb(114, 173, 255);
-  color: white;
-  border: 1px solid black;
+  border: 2px solid black;
+  color: black;
 }
 
 .housecard {
