@@ -2,53 +2,158 @@ import imgForYou from "./assets/foryou.jpg";
 
 export const houses = [
   {
+    id: 1,
     img: imgForYou,
     name: "RC ForYou",
     cost: "30.000.000tg",
     address: "Rozibakiyeva",
-    rating: "4.9"
+    rating: "4.9",
+    images: [
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+    ]
   },
   {
+    id: 2,
     img: imgForYou,
     name: "RC AnotherName",
     cost: "40.000.000tg",
     address: "AnotherAddress",
-    rating: "4.5"
+    rating: "4.5",
+    images: [
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+    ]
   },
   {
+    id: 3,
     img: imgForYou,
     name: "RC DifferentName",
     cost: "25.000.000tg",
     address: "DifferentAddress",
-    rating: "4.8"
+    rating: "4.8",
+    images: [
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+    ]
   },
   {
+    id: 4,
     img: imgForYou,
     name: "RC NewName",
     cost: "35.000.000tg",
     address: "NewAddress",
-    rating: "4.7"
+    rating: "4.7",
+    images: [
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+    ]
   },
   {
+    id: 5,
     img: imgForYou,
     name: "RC SomeName",
     cost: "28.000.000tg",
     address: "SomeAddress",
-    rating: "4.6"
+    rating: "4.6",
+    images: [
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+    ]
   },
   {
+    id: 6,
     img: imgForYou,
     name: "RC Aisulu",
     cost: "30.000.000tg",
     address: "Rozibakiyeva",
-    rating: "4.9"
+    rating: "4.9",
+    images: [
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+    ]
   },
   {
+    id: 7,
     img: imgForYou,
     name: "RC DifferentForYou",
     cost: "45.000.000tg",
     address: "AnotherRozibakiyeva",
-    rating: "4.4"
+    rating: "4.4",
+    images: [
+      {
+        original: imgForYou,
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+      {
+        original: imgForYou
+      },
+    ]
   },
 ];
 
