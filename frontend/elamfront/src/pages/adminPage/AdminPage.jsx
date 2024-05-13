@@ -1,10 +1,10 @@
-import Sidebar from "../../../components/sidebar/Sidebar";
-import Navbar from "../../../components/navbar/Navbar";
-import "./home.scss";
-import Widget from "../../../components/widget/Widget";
-import Table from "../../../components/table/Table";
+import "./adminPage.scss";
+import Sidebar from "./components/sidebar/Sidebar";
+import Widget from "./components/widget/Widget";
+import Navbar from "./components/navbar/Navbar";
+import Table from "./components/table/Table";
 
-const Home = () => {
+const AdminPage = () => {
   return (
     <div className="home">
       <Sidebar />
@@ -25,4 +25,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default AdminPage;

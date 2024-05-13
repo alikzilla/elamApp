@@ -1,4 +1,4 @@
-import houseImage from "./assets/foryou.jpg";
+import houseImage from "./assets/4you/foryou.jpg";
 
 export const userColumns = [
   { 

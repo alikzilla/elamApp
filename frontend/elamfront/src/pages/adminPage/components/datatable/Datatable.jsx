@@ -1,8 +1,8 @@
 import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows } from "../../datatablesource";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { userColumns, userRows } from "../../../../datatablesource";
 
 const Datatable = () => {
   const [data, setData] = useState(userRows);

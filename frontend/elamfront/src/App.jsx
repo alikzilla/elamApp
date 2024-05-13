@@ -5,12 +5,18 @@ import Footer from './components/footer/Footer';
 
 import HomePage from './pages/homePage/HomePage';
 import AboutPage from './pages/aboutPage/AboutPage';
-import HousePage from './pages/housesPage/Pricepage';
 import ContactPage from './pages/contactPage/ContactPage';
-import HouseItemPage from './pages/houseItemPage/HouseItemPage';
-import Home from "./pages/adminPage/home/Home";
-import List from "./pages/adminPage/list/List";
-import New from "./pages/adminPage/new/New";
+
+// Houses page
+import HousePage from './pages/housesPage/HousesPage';
+import HouseItemPage from './pages/housesPage/pages/houseItem/HouseItemPage';
+
+// Admin page
+import AdminPage from "./pages/adminPage/AdminPage";
+import List from "./pages/adminPage/pages/list/List";
+import New from "./pages/adminPage/pages/new/New";
+
+import { houseInputs } from "./formSource";
 
 
 function App() {
@@ -35,12 +41,14 @@ function App() {
       <Header headerTitle="Elam" items={headerItems} />
       <Routes>
         <Route path={"/"} element={<HomePage />} />
-        <Route path={"/howitworks"} element={<AboutPage />} />
-        <Route path={"/houses"} element={<HousePage />} />
-        <Route path={"/houses/:houseId"} element={<HouseItemPage />} />
-        <Route path={"/contacts"} element={<ContactPage />} />
-        <Route path={"admin/"}>
-          <Route index element={<Home />} />
+        <Route path={"howitworks"} element={<AboutPage />} />
+        <Route path={"houses"}> 
+          <Route index element={<HousePage />} />
+          <Route path=":houseId" element={<HouseItemPage />} />
+        </Route>
+        <Route path={"contacts"} element={<ContactPage />} />
+        <Route path={"admin"}>
+          <Route index element={<AdminPage />} />
               <Route path="houses">
                 <Route index element={<List />} />
                 <Route path="new" element={<New inputs={houseInputs} title="Add New House" />} />

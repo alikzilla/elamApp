@@ -1,11 +1,11 @@
-import styles from "./pricepage.module.css";
+import styles from "./housesPage.module.css";
 import { useEffect } from "react";
 import SearchBar from "./components/SearchBar";
 import Housecard from "./components/Housecard";
 import { houses } from "../../store";
 import { useState } from "react";
 
-const Pricepage = ({}) => {
+const HousesPage = ({}) => {
   const [searchInput, setSearchInput] = useState('');
 
   useEffect(() => {
@@ -37,4 +37,4 @@ const Pricepage = ({}) => {
   );
 }
 
-export default Pricepage;
+export default HousesPage;

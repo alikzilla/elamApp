@@ -6,7 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import houseImage from "../../assets/foryou.jpg";
+import houseImage from "../../../../assets/4you/foryou.jpg";
 
 const List = () => {
   const rows = [

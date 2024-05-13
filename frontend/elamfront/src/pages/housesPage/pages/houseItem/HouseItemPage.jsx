@@ -3,7 +3,7 @@ import styles from "./houseItemPage.module.css";
 import { useParams } from 'react-router-dom';
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import { houses } from "../../store";
+import { houses } from "../../../../store";
 import HouseCard from "./components/HouseCard";
 
 function HouseItemPage() {

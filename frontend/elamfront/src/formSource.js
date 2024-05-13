@@ -1,4 +1,4 @@
-export const userInputs = [
+export const houseInputs = [
     {
       id: 1,
       label: "Price",
