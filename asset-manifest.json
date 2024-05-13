@@ -1,14 +1,21 @@
 {
   "files": {
-    "main.css": "/elamApp/static/css/main.fff51890.css",
-    "main.js": "/elamApp/static/js/main.ffc34ede.js",
+    "main.css": "/elamApp/static/css/main.201c3e65.css",
+    "main.js": "/elamApp/static/js/main.de7814da.js",
+    "static/media/earthquake.jpg": "/elamApp/static/media/earthquake.0ed78e2a6acf8aa2ad6b.jpg",
     "static/media/almatyBackground.png": "/elamApp/static/media/almatyBackground.bc993cfba060ec4cd395.png",
+    "static/media/building.jpg": "/elamApp/static/media/building.3f576a80ff4760785a45.jpg",
+    "static/media/experts.jpg": "/elamApp/static/media/experts.940109cdc6238a3e1711.jpg",
+    "static/media/seismic.jpg": "/elamApp/static/media/seismic.fe6fff1b7e38c8925e2c.jpg",
+    "static/media/pusrchase.svg": "/elamApp/static/media/pusrchase.9ec7dc12ad919bc945f66fb7a42771d1.svg",
+    "static/media/foryou.jpg": "/elamApp/static/media/foryou.255963cb50dbd8d47ea4.jpg",
+    "static/media/step1.svg": "/elamApp/static/media/step1.c852a6a4bf33c9ae5dd374719163f27c.svg",
     "index.html": "/elamApp/index.html",
-    "main.fff51890.css.map": "/elamApp/static/css/main.fff51890.css.map",
-    "main.ffc34ede.js.map": "/elamApp/static/js/main.ffc34ede.js.map"
+    "main.201c3e65.css.map": "/elamApp/static/css/main.201c3e65.css.map",
+    "main.de7814da.js.map": "/elamApp/static/js/main.de7814da.js.map"
   },
   "entrypoints": [
-    "static/css/main.fff51890.css",
-    "static/js/main.ffc34ede.js"
+    "static/css/main.201c3e65.css",
+    "static/js/main.de7814da.js"
   ]
 }
