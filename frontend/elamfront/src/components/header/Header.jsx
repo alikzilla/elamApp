@@ -1,17 +1,19 @@
 import styles from "./header.module.css";
 import { Link } from "react-router-dom";
 
-const Header = ({}) => {
+const Header = ({ headerTitle, items }) => {
   return (
     <header className={styles.header}>
-      <Link to={"/"} className={styles.headerTitle}>Elam</Link>
+      <Link to={"/"} className={styles.headerTitle}>{headerTitle}</Link>
       <ul className={styles.itemList}>
-        <Link to={"/aboutpage"} className={styles.itemText}>Who we are</Link>
-        <Link to={"/houses"} className={styles.itemText}>Houses</Link>
-        <Link to={"/contactpage"} className={styles.itemText}>Contact</Link>
+        {items.map(({ link, text }) => (
+          <li key={link}>
+            <Link to={link} className={styles.itemText}>{text}</Link>
+          </li>
+        ))}
       </ul>
     </header>
-  )
-}
+  );
+};
 
 export default Header;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-function HousePage() {
+function HouseItemPage() {
   const { houseId } = useParams();
 
   return (
@@ -12,4 +12,4 @@ function HousePage() {
   );
 }
 
-export default HousePage;
+export default HouseItemPage;

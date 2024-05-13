@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import styles from "./pricecomp.module.css";
 
-const Searchbar = ({ setSearchInput }) => {
+const SearchBar = ({ setSearchInput }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (event) => {
@@ -10,10 +9,11 @@ const Searchbar = ({ setSearchInput }) => {
   };
 
   return (
-    <section className={styles.searchbar}>
-      <h1 className={styles.title}>There you can find safe houses</h1>
-      <div className={styles.controls}>
-        <input 
+    <section className="flex flex-col justify-center items-center gap-2">
+      <h1 className="text-3xl">There you can find safe houses</h1>
+      <div>
+        <input
+          className="border border-black rounded-lg px-6"
           type="text" 
           placeholder="District, Address, RC" 
           value={inputValue} 
@@ -24,4 +24,4 @@ const Searchbar = ({ setSearchInput }) => {
   );
 };
 
-export default Searchbar;
+export default SearchBar;

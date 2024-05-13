@@ -2,7 +2,7 @@ import WelcomeBlock from "./components/welcomeBlock/WelcomeBlock";
 import AboutBlock from "./components/aboutBlock/aboutBlock";
 import MapBlock from "../../components/mapBlock/MapBlock";
 
-const Homepage = ({}) => {
+const HomePage = ({}) => {
   return (
     <section>
       <WelcomeBlock />
@@ -12,4 +12,4 @@ const Homepage = ({}) => {
   )
 }
 
-export default Homepage;
+export default HomePage;
