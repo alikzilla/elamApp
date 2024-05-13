@@ -1,5 +1,6 @@
 import styles from "./houseCard.module.css";
 import { Link } from "react-router-dom";
+import Button from "../../../components/button/Button";
 
 const HouseCard = ({ house }) => {
   return (
@@ -7,10 +8,10 @@ const HouseCard = ({ house }) => {
       <img src={house.img} alt={house.name} className={styles.houseImage} />
       <div className={styles.houseInfo}>
         <h1>{house.name}</h1>
-        <p>{house.rating}</p>
+        <p>Rating: {house.rating}</p>
         <p>{house.cost}</p>
         <Link to={`/houses/${house.id}`}>
-          <button>Look</button>
+          <Button height={30}>Look</Button>
         </Link>
       </div>
     </section>

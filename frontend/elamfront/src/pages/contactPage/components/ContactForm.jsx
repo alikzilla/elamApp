@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "../contactpage.module.css";
+import Button from "../../../components/button/Button";
 
 const ContactForm = ({}) => {
   const [ nameText, setNameText ] = useState("");
@@ -36,9 +37,9 @@ const ContactForm = ({}) => {
       </div>
       <div className={styles.inputWrapper}>
         <label htmlFor="message">Message:</label>
-        <textarea name="message" id="message" placeholder="Yout message" onChange={MessageTextHandler} ></textarea>
+        <textarea name="message" id="message" placeholder="Your message" onChange={MessageTextHandler} ></textarea>
       </div>
-      <button className={styles.button} onClick={sendMessage}>Send Message</button>
+      <Button onClick={sendMessage}>Send Message</Button>
     </section>
   )
 }

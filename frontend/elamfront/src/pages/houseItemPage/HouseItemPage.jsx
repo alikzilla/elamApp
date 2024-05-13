@@ -26,7 +26,7 @@ function HouseItemPage() {
           <p>Address: {house.address}</p>
           <p>Cost: {house.cost}</p>
           <p>Rating: {house.rating}/5</p>
-          <p>Description: </p>
+          <p>Description: {house.description}</p>
         </div>
       </div>
       <div className={styles.sidebar}>
