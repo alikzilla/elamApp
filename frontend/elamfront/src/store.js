@@ -1,5 +1,20 @@
 import imgForYou from "./assets/foryou.jpg";
 
+export const accordionItems = [
+  {
+      header: "How were the safe houses selected?",
+      body: "The safe houses were selected based on rigorous engineering assessments and compliance with seismic safety standards established by local authorities."
+  },
+  {
+      header: "What criteria define a safe house in earthquake-prone areas?",
+      body: "A safe house in earthquake-prone areas is typically constructed with reinforced materials, designed to withstand the lateral forces exerted during seismic activity. It may also incorporate features such as flexible foundations and secure structural connections."
+  },
+  {
+      header: "How can I identify a safe house in my neighborhood?",
+      body: "You can identify safe houses in your neighborhood through our interactive map on the website, which highlights their locations and provides detailed information about their seismic safety features.",
+  }
+]
+
 export const houses = [
   {
     id: 1,
