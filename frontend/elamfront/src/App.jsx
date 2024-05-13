@@ -14,8 +14,8 @@ function App() {
 
   const headerItems = [
     {
-      link: "/about",
-      text: "Who we are"
+      link: "/howitworks",
+      text: "How it works"
     },
     {
       link: "/houses",
@@ -32,7 +32,7 @@ function App() {
       <Header headerTitle="Elam" items={headerItems} />
       <Routes>
         <Route path={"/"} element={<HomePage />} />
-        <Route path={"/about"} element={<AboutPage />} />
+        <Route path={"/howitworks"} element={<AboutPage />} />
         <Route path={"/houses"} element={<HousePage />} />
         <Route path={"/houses/:houseId"} element={<HouseItemPage />} />
         <Route path={"/contacts"} element={<ContactPage />} />

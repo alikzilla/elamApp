@@ -18,6 +18,10 @@
   padding-bottom: 50px;
 }
 
+.contactPage h1 {
+  font-size: 30px;
+}
+
 .formWrapper {
   width: 500px;
   padding: 30px;

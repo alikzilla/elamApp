@@ -37,7 +37,7 @@ const ContactForm = ({}) => {
       </div>
       <div className={styles.inputWrapper}>
         <label htmlFor="message">Message:</label>
-        <textarea name="message" id="message" placeholder="Yout message" onChange={MessageTextHandler} ></textarea>
+        <textarea name="message" id="message" placeholder="Your message" onChange={MessageTextHandler} ></textarea>
       </div>
       <Button onClick={sendMessage}>Send Message</Button>
     </section>
