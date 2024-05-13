@@ -8,7 +8,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import houseImage from "../../assets/foryou.jpg";
 
-const   List = () => {
+const List = () => {
   const rows = [
     {
       id: 1143155,
