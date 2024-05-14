@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { GoogleMap, useLoadScript, MarkerF, InfoWindow } from '@react-google-maps/api';
+import { GoogleMap, useLoadScript, MarkerF, InfoWindowF } from '@react-google-maps/api';
 import { coordinates } from "../../../store";
 
 const libraries = ['places'];
@@ -10,6 +10,13 @@ const mapContainerStyle = {
 const center = {
   lat: 43.244394,
   lng: 76.888000,
+};
+
+const adaptCoordinates = (coordinates) => {
+  return coordinates.map((coordinate, index) => ({
+    key: index,
+    position: coordinate,
+  }));
 };
 
 const Map = () => {
@@ -48,22 +55,21 @@ const Map = () => {
         zoom={11}
         center={center}
       >
-        {coordinatesHook.map((coordinate, index) => (
+        {adaptCoordinates(coordinatesHook).map(({ key, position }) => (
           <MarkerF
-            key={index}
-            position={coordinate}
-            onClick={() => handleMarkerClick(coordinate)}
+            key={key}
+            position={position}
+            onClick={() => handleMarkerClick(position)}
             title='Marker'
           >
-            {selectedMarker === coordinate && (
-              <InfoWindow onCloseClick={handleInfoWindowClose}>
-                <div>
-                  {/* Add content for InfoWindow */}
+            {selectedMarker === position && (
+              <InfoWindowF onCloseClick={handleInfoWindowClose}>
+                <div style={{color: "black"}}>
                   <h3>Location Details</h3>
-                  <p>Latitude: {coordinate.lat}</p>
-                  <p>Longitude: {coordinate.lng}</p>
+                  <p>Latitude: {position.lat}</p>
+                  <p>Longitude: {position.lng}</p>
                 </div>
-              </InfoWindow>
+              </InfoWindowF>
             )}
           </MarkerF>
         ))}
