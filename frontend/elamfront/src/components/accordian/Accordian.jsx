@@ -1,15 +1,28 @@
-import Accordion from 'react-bootstrap/Accordion';
+import React from 'react';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const BaseAccordion = ({ items }) => {
     return (
-        <Accordion defaultActiveKey={-1}>
+        <>
             {items.map((item, index) => (
-                <Accordion.Item key={index} eventKey={index}>
-                    <Accordion.Header>{item.header}</Accordion.Header>
-                    <Accordion.Body>{item.body}</Accordion.Body>
-                </Accordion.Item>
+                <Accordion key={index}>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls={`panel${index}-content`}
+                        id={`panel${index}-header`}
+                    >
+                        <Typography>{item.header}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>{item.body}</Typography>
+                    </AccordionDetails>
+                </Accordion>
             ))}
-        </Accordion>
+        </>
     );
 };
 
