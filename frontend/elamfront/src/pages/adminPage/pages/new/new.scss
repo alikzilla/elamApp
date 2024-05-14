@@ -1,6 +1,7 @@
 .new {
     width: 100%;
     display: flex;
+    padding-top: 80px;
   
     .newContainer {
       flex: 6;
@@ -20,7 +21,11 @@
   
         .left {
           flex: 1;
+          display: flex;
+          flex-direction: column;
           text-align: center;
+          align-items: center;
+          justify-content: flex-start;
   
           img {
             width: 100px;

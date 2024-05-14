@@ -7,12 +7,14 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 const New = () => {
   const [file, setFile] = useState("");
   const [formData, setFormData] = useState({
-    house: "",
+    id: "",
+    name: "",
+    cost: "",
     address: "",
-    price: "",
     rating: "",
-    comment: ""
+    description: ""
   });
+  const [images, setImages] = useState(Array.from({ length: 4 }, () => ({ original: "" })));
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -24,20 +26,31 @@ const New = () => {
 
   const sendHouse = (e) => {
     e.preventDefault();
-    console.log(formData); // Log the form data
-    // Reset the form
+    const newHouse = {
+      id: formData.id, // Use the entered ID
+      img: file ? URL.createObjectURL(file) : "",
+      name: formData.name,
+      cost: formData.cost,
+      address: formData.address,
+      rating: formData.rating,
+      description: formData.description,
+      images: images
+    };
+    console.log(newHouse);
     setFile("");
     setFormData({
-      house: "",
+      id: "",
+      name: "",
+      cost: "",
       address: "",
-      price: "",
       rating: "",
-      comment: ""
+      description: ""
     });
+    setImages(Array.from({ length: 4 }, () => ({ original: "" })));
   };
 
   return (
-    <div className="new pt-20">
+    <div className="new">
       <Sidebar />
       <div className="newContainer">
         <Navbar />
@@ -54,27 +67,47 @@ const New = () => {
               }
               alt=""
             />
+            <div className="formInput">
+              <label htmlFor="file">
+                Image: <DriveFolderUploadOutlinedIcon className="icon" />
+              </label>
+              <input
+                type="file"
+                id="file"
+                onChange={(e) => setFile(e.target.files[0])}
+                style={{ display: "none" }}
+              />
+            </div>
           </div>
           <div className="right">
             <form>
+              
               <div className="formInput">
-                <label htmlFor="file">
-                  Image: <DriveFolderUploadOutlinedIcon className="icon" />
-                </label>
+                <label>ID:</label>
                 <input
-                  type="file"
-                  id="file"
-                  onChange={(e) => setFile(e.target.files[0])}
-                  style={{ display: "none" }}
+                  type="text"
+                  name="id"
+                  value={formData.id}
+                  onChange={handleInputChange}
                 />
               </div>
 
               <div className="formInput">
-                <label>House:</label>
+                <label>Name:</label>
                 <input
                   type="text"
-                  name="house"
-                  value={formData.house}
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                />
+              </div>
+
+              <div className="formInput">
+                <label>Cost:</label>
+                <input
+                  type="text"
+                  name="cost"
+                  value={formData.cost}
                   onChange={handleInputChange}
                 />
               </div>
@@ -90,16 +123,6 @@ const New = () => {
               </div>
 
               <div className="formInput">
-                <label>Price:</label>
-                <input
-                  type="text"
-                  name="price"
-                  value={formData.price}
-                  onChange={handleInputChange}
-                />
-              </div>
-
-              <div className="formInput">
                 <label>Rating:</label>
                 <input
                   type="text"
@@ -110,14 +133,28 @@ const New = () => {
               </div>
 
               <div className="formInput">
-                <label>Comment:</label>
+                <label>Description:</label>
                 <input
                   type="text"
-                  name="comment"
-                  value={formData.comment}
+                  name="description"
+                  value={formData.description}
                   onChange={handleInputChange}
                 />
               </div>
+
+              {images.map((image, index) => (
+                <div className="formInput" key={index}>
+                  <label>Image {index + 1}:</label>
+                  <input
+                    type="file"
+                    onChange={(e) => {
+                      const newImages = [...images];
+                      newImages[index] = { original: URL.createObjectURL(e.target.files[0]) };
+                      setImages(newImages);
+                    }}
+                  />
+                </div>
+              ))}
 
               <button onClick={sendHouse}>Send</button>
             </form>
