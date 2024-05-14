@@ -1,10 +1,9 @@
-// Input.js
 import React from 'react';
 import styles from './input.module.css';
 
 const Input = ({ type, label, placeholder, value, onChange }) => {
   const handleChange = (event) => {
-    onChange(event.target.value);
+    onChange(event);
   };
 
   return (
