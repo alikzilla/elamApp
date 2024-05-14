@@ -32,7 +32,7 @@ const HomePage = ({ }) => {
   ];
 
   return (
-    <section>
+    <section className="pt-20">
 
       {/* Welcome Block */}
       <BaseContainer className="welcomeBlock">

@@ -37,7 +37,7 @@ const New = () => {
   };
 
   return (
-    <div className="new">
+    <div className="new pt-20">
       <Sidebar />
       <div className="newContainer">
         <Navbar />

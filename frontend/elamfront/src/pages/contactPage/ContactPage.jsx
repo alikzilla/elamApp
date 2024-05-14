@@ -8,7 +8,7 @@ const ContactPage = ({}) => {
   }, [])
 
   return (
-    <section className={styles.contactPage}>
+    <section className={`${styles.contactPage} pt-20`}>
       <h1>Contact us to better experience</h1>
       <ContactForm />
     </section>

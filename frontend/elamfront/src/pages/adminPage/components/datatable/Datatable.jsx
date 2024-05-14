@@ -34,7 +34,7 @@ const Datatable = () => {
     <div className="datatable">
       <div className="datatableTitle">
         Add new House
-        <Link to="/houses/new" className="link">
+        <Link to="/admin/houses/new" className="link">
           Add New House
         </Link>
       </div>

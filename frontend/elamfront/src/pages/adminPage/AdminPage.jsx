@@ -6,7 +6,7 @@ import TableList from "./components/tablelist/TableList";
 
 const AdminPage = () => {
   return (
-    <div className="home">
+    <div className="home pt-20">
       <Sidebar />
       <div className="homeContainer">
         <Navbar />
