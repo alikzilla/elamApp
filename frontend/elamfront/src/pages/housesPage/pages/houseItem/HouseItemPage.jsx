@@ -1,44 +1,69 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from "./houseItemPage.module.css";
 import { useParams } from 'react-router-dom';
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import { houses } from "../../../../store";
 import HouseCard from "./components/HouseCard";
 import Chart from "chart.js/auto";
 
 function HouseItemPage() {
   
   const { houseId } = useParams();
-  const house = houses.find((item) => houseId == item.id);
-  const anotherHouses = houses.filter((item) => houseId != item.id);
+  const [house, setHouse] = useState(null);
+  const [anotherHouses, setAnotherHouses] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    console.log(houses);
-    console.log(house);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  
-    const chartData = {
-      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-      values1: [10, 40, 40, 20, 40, 30],
-      values2: [40, 30, 50, 70, 70, 80]
-    };
+    fetch(`http://localhost:5000/houses/${houseId}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch house data');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setHouse(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        setError(error.message);
+        setLoading(false);
+      });
+
+    fetch(`http://localhost:5000/houses`)
+      .then(response => response.json())
+      .then(data => {
+        setAnotherHouses(data.filter(house => house.id !== houseId));
+      })
+      .catch(error => console.error('Error fetching houses:', error));
+  }, [houseId]);
+
+  useEffect(() => {
+    if (house) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     
-    const doughnutData = {
-      labels: ["Seismic Rating", "Energy Efficiency", "Amenities", "Location", "Neighborhood", "Security"],
-      values: [60, 40, 30, 10, 5]
-    };
+      const chartData = {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        values1: [10, 40, 40, 20, 40, 30],
+        values2: [40, 30, 50, 70, 70, 80]
+      };
+      
+      const doughnutData = {
+        labels: ["Seismic Rating", "Energy Efficiency", "Amenities", "Location", "Neighborhood", "Security"],
+        values: [60, 40, 30, 10, 5]
+      };
+    
+      const lineChart = createLineChart(chartData);
+      const doughnutChart = createDoughnutChart(doughnutData);
   
-    const lineChart = createLineChart(chartData);
-    const doughnutChart = createDoughnutChart(doughnutData);
-
-
-    return () => {
-      lineChart.destroy();
-      doughnutChart.destroy();
-    };
+      return () => {
+        lineChart.destroy();
+        doughnutChart.destroy();
+      };
+    }
   }, [house]);
-  
+
   function createLineChart(data) {
     const ctx = document.getElementById("lineChart").getContext("2d");
     return new Chart(ctx, {
@@ -95,6 +120,14 @@ function HouseItemPage() {
         }]
       }
     });
+  }
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
   }
 
   return (

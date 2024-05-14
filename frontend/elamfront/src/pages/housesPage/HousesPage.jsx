@@ -8,9 +8,8 @@ const HousesPage = () => {
   const [searchInput, setSearchInput] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
   useEffect(() => {
-    fetch('https://localhost:5000/houses')
+    fetch('http://localhost:5000/houses')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch houses data');
