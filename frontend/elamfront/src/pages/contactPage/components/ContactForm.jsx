@@ -76,7 +76,6 @@ const ContactForm = () => {
     };
 
     const sendMessage = () => {
-        console.log("sss")
         messageSenderProxy.sendMessage(nameText, emailText, messageText);
     };
 

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = ({ headerTitle, items }) => {
   return (
     <header className={styles.header}>
-      <Link to={"/"} className={styles.headerTitle}>{headerTitle}</Link>
+      <Link to={"/elamApp"} className={styles.headerTitle}>{headerTitle}</Link>
       <ul className={styles.itemList}>
         {items.map(({ link, text }) => (
           <li key={link}>

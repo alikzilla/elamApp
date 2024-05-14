@@ -8,7 +8,7 @@ import AboutPage from './pages/aboutPage/AboutPage';
 import ContactPage from './pages/contactPage/ContactPage';
 
 // Houses page
-import HousePage from './pages/housesPage/HousesPage';
+import HousesPage from './pages/housesPage/HousesPage';
 import HouseItemPage from './pages/housesPage/pages/houseItem/HouseItemPage';
 
 // Admin page
@@ -40,10 +40,10 @@ function App() {
     <>
       <Header headerTitle="Elam" items={headerItems} />
       <Routes>
-        <Route path={"/"} element={<HomePage />} />
+        <Route path={"/elamApp"} element={<HomePage />} />
         <Route path={"/howitworks"} element={<AboutPage />} />
         <Route path={"/houses"}> 
-          <Route index element={<HousePage />} />
+          <Route index element={<HousesPage />} />
           <Route path=":houseId" element={<HouseItemPage />} />
         </Route>
         <Route path={"/contacts"} element={<ContactPage />} />
