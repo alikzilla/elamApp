@@ -7,7 +7,7 @@ import stepImage5 from "./assets/building.jpg";
 import stepImage6 from "./assets/experts.jpg";
 import stepImage7 from "./assets/pusrchase.svg";
 
-export const accordionItems = [
+export const faq = [
   {
       header: "How were the safe houses selected?",
       body: "The safe houses were selected based on rigorous engineering assessments and compliance with seismic safety standards established by local authorities."
@@ -21,6 +21,24 @@ export const accordionItems = [
       body: "You can identify safe houses in your neighborhood through our interactive map on the website, which highlights their locations and provides detailed information about their seismic safety features.",
   }
 ]
+
+export const usageInfo = [
+  {
+    name: "Awareness-raising",
+    content:
+      "The site can help potential buyers and property owners make more informed decisions.",
+  },
+  {
+    name: "Risk mitigation",
+    content:
+      "The site can help reduce the risks associated with buying property in earthquake-prone and/or unfavourable climatic conditions.",
+  },
+  {
+    name: "Increasing market transparency",
+    content:
+      "The site can increase the transparency of the property market by providing access to information on the reliability of properties.",
+  },
+];
 
 export const houses = [
   {
