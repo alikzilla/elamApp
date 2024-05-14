@@ -25,8 +25,8 @@ const Map = () => {
     libraries,
   });
 
-  const handleMarkerClick = (marker) => {
-    setSelectedMarker(marker);
+  const handleMarkerClick = (coordinate) => {
+    setSelectedMarker(coordinate);
   };
 
   const handleInfoWindowClose = () => {
@@ -53,7 +53,19 @@ const Map = () => {
             key={index}
             position={coordinate}
             onClick={() => handleMarkerClick(coordinate)}
-          />
+            title='Marker'
+          >
+            {selectedMarker === coordinate && (
+              <InfoWindow onCloseClick={handleInfoWindowClose}>
+                <div>
+                  {/* Add content for InfoWindow */}
+                  <h3>Location Details</h3>
+                  <p>Latitude: {coordinate.lat}</p>
+                  <p>Longitude: {coordinate.lng}</p>
+                </div>
+              </InfoWindow>
+            )}
+          </MarkerF>
         ))}
       </GoogleMap>
     </div>
