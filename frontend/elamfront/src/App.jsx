@@ -41,13 +41,13 @@ function App() {
       <Header headerTitle="Elam" items={headerItems} />
       <Routes>
         <Route path={"/"} element={<HomePage />} />
-        <Route path={"howitworks"} element={<AboutPage />} />
-        <Route path={"houses"}> 
+        <Route path={"/howitworks"} element={<AboutPage />} />
+        <Route path={"/houses"}> 
           <Route index element={<HousePage />} />
           <Route path=":houseId" element={<HouseItemPage />} />
         </Route>
-        <Route path={"contacts"} element={<ContactPage />} />
-        <Route path={"admin"}>
+        <Route path={"/contacts"} element={<ContactPage />} />
+        <Route path={"/admin"}>
           <Route index element={<AdminPage />} />
               <Route path="houses">
                 <Route index element={<List />} />

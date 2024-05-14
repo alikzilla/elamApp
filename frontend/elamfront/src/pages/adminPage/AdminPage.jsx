@@ -2,7 +2,7 @@ import "./adminPage.scss";
 import Sidebar from "./components/sidebar/Sidebar";
 import Widget from "./components/widget/Widget";
 import Navbar from "./components/navbar/Navbar";
-import Table from "./components/table/Table";
+import TableList from "./components/tablelist/TableList";
 
 const AdminPage = () => {
   return (
@@ -18,7 +18,7 @@ const AdminPage = () => {
         </div>
         <div className="listContainer">
           <div className="listTitle">Latest Transactions</div>
-          <Table />
+          <TableList />
         </div>
       </div>
     </div>
