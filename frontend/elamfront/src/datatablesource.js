@@ -26,7 +26,7 @@ export const userColumns = [
   },
 
   {
-    field: "price",
+    field: "cost",
     headerName: "Price",
     width: 200,
   },

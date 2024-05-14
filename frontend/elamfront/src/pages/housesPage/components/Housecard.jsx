@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./pricecomp.module.css";
 import Button from "../../../components/button/Button";
+import image from "../../../assets/4you/foryou.jpg";
 
 const Housecard = ({ id, img, name, cost, address, rating }) => {
   const [isSelected, setIsSelected] = useState(false);
@@ -12,7 +13,7 @@ const Housecard = ({ id, img, name, cost, address, rating }) => {
 
   return (
     <section className={`${styles.housecard} ${isSelected ? styles.selected : ''}`}>
-      <img src={img} alt={"house_" + img} className={styles.houseImage} />
+      <img src={image} alt={"house_" + img} className={styles.houseImage} />
       <div className={styles.cardContent}>
         <div className={styles.textContent}>
           <h1>{name}</h1>

@@ -26,28 +26,54 @@ const New = () => {
 
   const sendHouse = (e) => {
     e.preventDefault();
+    
     const newHouse = {
-      id: formData.id, // Use the entered ID
-      img: file ? URL.createObjectURL(file) : "",
-      name: formData.name,
-      cost: formData.cost,
-      address: formData.address,
-      rating: formData.rating,
-      description: formData.description,
-      images: images
+        id: formData.id,
+        img: file ? URL.createObjectURL(file) : "",
+        name: formData.name,
+        cost: formData.cost,
+        address: formData.address,
+        rating: formData.rating,
+        description: formData.description,
+        images: images
     };
-    console.log(newHouse);
+
+    fetch('http://localhost:5000/houses', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newHouse)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to add new house');
+        }
+        console.log('New house added successfully');
+        return response.json();
+    })
+    .then(data => {
+        console.log('Response data:', data);
+        // Optionally, you can perform any additional actions after successful POST request
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Handle any errors that occur during the POST request
+    });
+
+    // Reset form fields and images after sending the POST request
     setFile("");
     setFormData({
-      id: "",
-      name: "",
-      cost: "",
-      address: "",
-      rating: "",
-      description: ""
+        id: "",
+        name: "",
+        cost: "",
+        address: "",
+        rating: "",
+        description: ""
     });
     setImages(Array.from({ length: 4 }, () => ({ original: "" })));
-  };
+};
+
 
   return (
     <div className="new">
