@@ -1,22 +1,27 @@
+// ContactForm.js
 import React, { useState } from 'react';
 import styles from '../contactpage.module.css';
 import Button from '../../../components/button/Button';
+import Input from '../../../components/input/Input';
 
 const ContactForm = () => {
   const [nameText, setNameText] = useState("");
   const [emailText, setEmailText] = useState("");
   const [messageText, setMessageText] = useState("");
 
-  const handleNameChange = (event) => {
-    setNameText(event.target.value);
+  const handleNameChange = (value) => {
+    console.log(nameText)
+    setNameText(value);
   };
 
-  const handleEmailChange = (event) => {
-    setEmailText(event.target.value);
+  const handleEmailChange = (value) => {
+    console.log(nameText)
+    setEmailText(value);
   };
 
-  const handleMessageChange = (event) => {
-    setMessageText(event.target.value);
+  const handleMessageChange = (value) => {
+    console.log(nameText)
+    setMessageText(value);
   };
 
   const sendMessage = () => {
@@ -40,18 +45,9 @@ const ContactForm = () => {
 
   return (
     <section className={styles.formWrapper}>
-      <div className={styles.inputWrapper}>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" placeholder="Your name" onChange={handleNameChange} />
-      </div>
-      <div className={styles.inputWrapper}>
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" placeholder="Your email" onChange={handleEmailChange} />
-      </div>
-      <div className={styles.inputWrapper}>
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" placeholder="Your message" onChange={handleMessageChange}></textarea>
-      </div>
+      <Input label={"Name"} type={"text"} placeholder={"Your name"} value={nameText} onChange={handleNameChange} />
+      <Input label={"Email"} type={"text"} placeholder={"Your email"} value={emailText} onChange={handleEmailChange} />
+      <Input label={"Message"} type={"textarea"} placeholder={"Your message"} value={messageText} onChange={handleMessageChange} />
       <Button onClick={sendMessage}>Send Message</Button>
     </section>
   );
