@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/elamApp/static/css/main.201c3e65.css",
-    "main.js": "/elamApp/static/js/main.de7814da.js",
+    "main.css": "/elamApp/static/css/main.490699db.css",
+    "main.js": "/elamApp/static/js/main.4edced59.js",
     "static/media/earthquake.jpg": "/elamApp/static/media/earthquake.0ed78e2a6acf8aa2ad6b.jpg",
     "static/media/almatyBackground.png": "/elamApp/static/media/almatyBackground.bc993cfba060ec4cd395.png",
     "static/media/building.jpg": "/elamApp/static/media/building.3f576a80ff4760785a45.jpg",
@@ -11,11 +11,11 @@
     "static/media/foryou.jpg": "/elamApp/static/media/foryou.255963cb50dbd8d47ea4.jpg",
     "static/media/step1.svg": "/elamApp/static/media/step1.c852a6a4bf33c9ae5dd374719163f27c.svg",
     "index.html": "/elamApp/index.html",
-    "main.201c3e65.css.map": "/elamApp/static/css/main.201c3e65.css.map",
-    "main.de7814da.js.map": "/elamApp/static/js/main.de7814da.js.map"
+    "main.490699db.css.map": "/elamApp/static/css/main.490699db.css.map",
+    "main.4edced59.js.map": "/elamApp/static/js/main.4edced59.js.map"
   },
   "entrypoints": [
-    "static/css/main.201c3e65.css",
-    "static/js/main.de7814da.js"
+    "static/css/main.490699db.css",
+    "static/js/main.4edced59.js"
   ]
 }
